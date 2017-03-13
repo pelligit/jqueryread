@@ -1,0 +1,3 @@
+function extend(target,obj){
+
+}
