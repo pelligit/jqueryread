@@ -1,25 +1,67 @@
-> 所有的内容围绕着jQuery源码的阅读。有关于其他的知识，在help文件夹下会有大略的介绍，详细内容请自行查找资料。  
-> 源码阅读过程会总结源码中的各种function，最终归纳在一个function.js文件中  
-> 阅读源码过程中会总结源码相关的各种名词，并归纳在words.md中  
+> 
+> 该项目的所有的内容都围绕着jQuery源码的阅读。  
+> 有关于其他的知识，在help文件夹下会有大略的介绍，详细内容请自行查找资料。  
+> 源码阅读过程会总结源码中各个模块的的function，最终归纳在result文件夹下的function.js文件中  
+> 阅读源码过程中会总结源码相关的各种名词，并归纳在result网文件夹下words.md中  
 > 
 
-### 项目说明  
+### 项目的目录结构  
 ```
-|--- jqueryread/  
-|   |--- article/  
-|   |   |--- img/  
-|   |   |--- README.md  
-|   |--- demo/  
-|   |   |--- article/  
+|--- jqueryread/  ____源码阅读根目录
+|   |--- article/  ____源码阅读文章所在目录
+|   |   |--- img/  ____文章相关的图片资料文件夹
+|   |   |   |--- article-1/  ____文章article-1.md的图片资料文件夹
+|   |   |   |   |--- ....png
+|   |   |   |   |--- ....jpg
+|   |   |   |   |--- ....png
+|   |   |   |   |--- ....png
+|   |   |   |--- ...  
+|   |   |   |--- article-n/  ____文章article-n.md的图片资料文件夹
+|   |   |--- article-1.md  ____文章article-1
+|   |   |--- ...
+|   |   |--- ...
+|   |   |--- article-n.md  ____文章article-n
+|   |   |--- README.md  ____说明
+|   |--- demo/  ____示例所在文件夹
+|   |   |--- article/  ____文章示例所在文件夹
+|   |   |   |--- article-1/  ____文章article-1的示例
+|   |   |   |--- ...
+|   |   |   |--- ...
+|   |   |   |--- ...
+|   |   |   |--- article-n/  ____文章article-n的示例
 |   |   |--- help/  
 |   |   |--- libs/  
 |   |   |--- word/  
 |   |--- function/  
+|   |   |--- ajax.js
+|   |   |--- attr.js
+|   |   |--- css.js
+|   |   |--- ...
+|   |   |--- ...
+|   |   |--- jquery.function.js
+|   |   |--- README.md
 |   |--- help/  
+|   |   |--- 模块化/
+|   |   |   |--- AMD  
+|   |   |   |--- CMD  
+|   |   |   |--- UMD  
+|   |   |   |--- Commonjs  
+|   |   |--- 前端工程化/
+|   |   |   |--- grunt
+|   |   |   |--- gulp
+|   |   |   |--- fis
+|   |   |   |--- webpack
+|   |   |--- ...  
+|   |   |--- ...  
+|   |   |--- ...  
+|   |   |--- ...  
+|   |   |--- node/  
 |   |--- result/  
 |   |   |--- jquery.function.js  
 |   |   |--- word.js  
 |   |   |--- word.md  
+|   |--- README.md
+|   |--- .gitignore
 ```
 
 
