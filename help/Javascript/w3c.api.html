@@ -1,0 +1,3459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>api</title>
+</head>
+<body>
+    <div id="toc" class="toc">
+    <div id="toctitle">
+        <h2>Contents</h2>
+        <span class="toctoggle">
+            &nbsp;[<a href="#" class="internal" id="togglelink">hide</a>
+            ]&nbsp;
+        </span>
+    </div>
+    <ul>
+        <li class="toclevel-1 tocsection-1">
+            <a href="#.E5.85.A8.E5.B1.80.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">1</span>
+                <span class="toctext">
+                    <span></span>
+                    全局对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-2">
+                    <a href="#.E5.85.A8.E5.B1.80.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.80.BC.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">1.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            全局对象的值属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-3">
+                            <a href="#NaN">
+                                <span class="tocnumber">1.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NaN
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-4">
+                            <a href="#Infinity">
+                                <span class="tocnumber">1.1.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Infinity
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-5">
+                            <a href="#undefined">
+                                <span class="tocnumber">1.1.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    undefined
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-6">
+                    <a href="#.E5.85.A8.E5.B1.80.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.87.BD.E6.95.B0.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">1.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            全局对象的函数属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-7">
+                            <a href="#eval_.28x.29">
+                                <span class="tocnumber">1.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    eval (x)
+                                </span>
+                            </a>
+                            <ul>
+                                <li class="toclevel-4 tocsection-8">
+                                    <a href="#.E7.9B.B4.E6.8E.A5.E8.B0.83.E7.94.A8_Eval">
+                                        <span class="tocnumber">1.2.1.1</span>
+                                        <span class="toctext">
+                                            <span></span>
+                                            直接调用 Eval
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="toclevel-3 tocsection-9">
+                            <a href="#parseInt_.28string.2C_radix.29">
+                                <span class="tocnumber">1.2.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    parseInt (string, radix)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-10">
+                            <a href="#parseFloat_.28string.29">
+                                <span class="tocnumber">1.2.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    parseFloat (string)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-11">
+                            <a href="#isNaN_.28number.29">
+                                <span class="tocnumber">1.2.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    isNaN (number)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-12">
+                            <a href="#isFinite_.28number.29">
+                                <span class="tocnumber">1.2.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    isFinite (number)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-13">
+                    <a href="#.E5.A4.84.E7.90.86_URI_.E7.9A.84.E5.87.BD.E6.95.B0.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">1.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            处理 URI 的函数属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-14">
+                            <a href="#decodeURI_.28encodedURI.29">
+                                <span class="tocnumber">1.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    decodeURI (encodedURI)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-15">
+                            <a href="#decodeURIComponent_.28encodedURIComponent.29">
+                                <span class="tocnumber">1.3.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    decodeURIComponent (encodedURIComponent)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-16">
+                            <a href="#encodeURI_.28uri.29">
+                                <span class="tocnumber">1.3.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    encodeURI (uri)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-17">
+                            <a href="#encodeURIComponent_.28uriComponent.29">
+                                <span class="tocnumber">1.3.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    encodeURIComponent (uriComponent)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-18">
+                    <a href="#.E5.85.A8.E5.B1.80.E5.AF.B9.E8.B1.A1.E7.9A.84.E6.9E.84.E9.80.A0.E5.99.A8.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">1.4</span>
+                        <span class="toctext">
+                            全局对象的构造器属性 <span></span>
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-19">
+                            <a href="#Object_.28_._._._.29">
+                                <span class="tocnumber">1.4.1</span>
+                                <span class="toctext">
+                                    Object ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-20">
+                            <a href="#Function_.28_._._._.29">
+                                <span class="tocnumber">1.4.2</span>
+                                <span class="toctext">
+                                    Function ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-21">
+                            <a href="#Array_.28_._._._.29">
+                                <span class="tocnumber">1.4.3</span>
+                                <span class="toctext">
+                                    Array ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-22">
+                            <a href="#String_.28_._._._.29">
+                                <span class="tocnumber">1.4.4</span>
+                                <span class="toctext">
+                                    String ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-23">
+                            <a href="#Boolean_.28_._._._.29">
+                                <span class="tocnumber">1.4.5</span>
+                                <span class="toctext">
+                                    Boolean ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-24">
+                            <a href="#Number_.28_._._._.29">
+                                <span class="tocnumber">1.4.6</span>
+                                <span class="toctext">
+                                    Number ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-25">
+                            <a href="#Date_.28_._._._.29">
+                                <span class="tocnumber">1.4.7</span>
+                                <span class="toctext">
+                                    Date ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-26">
+                            <a href="#RegExp_.28_._._._.29">
+                                <span class="tocnumber">1.4.8</span>
+                                <span class="toctext">
+                                    RegExp ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-27">
+                            <a href="#Error_.28_._._._.29">
+                                <span class="tocnumber">1.4.9</span>
+                                <span class="toctext">
+                                    Error ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-28">
+                            <a href="#EvalError_.28_._._._.29">
+                                <span class="tocnumber">1.4.10</span>
+                                <span class="toctext">
+                                    EvalError ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-29">
+                            <a href="#RangeError_.28_._._._.29">
+                                <span class="tocnumber">1.4.11</span>
+                                <span class="toctext">
+                                    RangeError ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-30">
+                            <a href="#ReferenceError_.28_._._._.29">
+                                <span class="tocnumber">1.4.12</span>
+                                <span class="toctext">
+                                    ReferenceError ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-31">
+                            <a href="#SyntaxError_.28_._._._.29">
+                                <span class="tocnumber">1.4.13</span>
+                                <span class="toctext">
+                                    SyntaxError ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-32">
+                            <a href="#TypeError_.28_._._._.29">
+                                <span class="tocnumber">1.4.14</span>
+                                <span class="toctext">
+                                    TypeError ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-33">
+                            <a href="#URIError_.28_._._._.29">
+                                <span class="tocnumber">1.4.15</span>
+                                <span class="toctext">
+                                    URIError ( . . . )<span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-34">
+                    <a href="#.E5.85.A8.E5.B1.80.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.85.B6.E4.BB.96.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">1.5</span>
+                        <span class="toctext">
+                            全局对象的其他属性 <span></span>
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-35">
+                            <a href="#Math">
+                                <span class="tocnumber">1.5.1</span>
+                                <span class="toctext">
+                                    Math<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-36">
+                            <a href="#JSON">
+                                <span class="tocnumber">1.5.2</span>
+                                <span class="toctext">
+                                    JSON<span></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-37">
+            <a href="#Object_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">2</span>
+                <span class="toctext">
+                    <span></span>
+                    Object 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-38">
+                    <a href="#.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8_Object_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">2.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            作为函数调用 Object 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-39">
+                            <a href="#Object_.28_.5B_value_.5D_.29">
+                                <span class="tocnumber">2.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object ( [ value ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-40">
+                    <a href="#Object_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">2.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            Object 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-41">
+                            <a href="#new_Object_.28_.5B_value_.5D_.29">
+                                <span class="tocnumber">2.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Object ( [ value ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-42">
+                    <a href="#Object_.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">2.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            Object 构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-43">
+                            <a href="#Object.prototype">
+                                <span class="tocnumber">2.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.prototype
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-44">
+                            <a href="#Object.getPrototypeOf_.28_O_.29">
+                                <span class="tocnumber">2.3.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.getPrototypeOf ( O )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-45">
+                            <a href="#Object.getOwnPropertyDescriptor_.28_O.2C_P_.29">
+                                <span class="tocnumber">2.3.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.getOwnPropertyDescriptor ( O, P )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-46">
+                            <a href="#Object.getOwnPropertyNames_.28_O_.29">
+                                <span class="tocnumber">2.3.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.getOwnPropertyNames ( O )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-47">
+                            <a href="#Object.create_.28_O_.5B.2C_Properties.5D_.29">
+                                <span class="tocnumber">2.3.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.create ( O [, Properties] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-48">
+                            <a href="#Object.defineProperty_.28_O.2C_P.2C_Attributes_.29">
+                                <span class="tocnumber">2.3.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.defineProperty ( O, P, Attributes )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-49">
+                            <a href="#Object.defineProperties_.28_O.2C_Properties_.29">
+                                <span class="tocnumber">2.3.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.defineProperties ( O, Properties )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-50">
+                            <a href="#Object.seal_.28_O_.29">
+                                <span class="tocnumber">2.3.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.seal ( O )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-51">
+                            <a href="#Object.freeze_.28_O_.29">
+                                <span class="tocnumber">2.3.9</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.freeze ( O )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-52">
+                            <a href="#Object.preventExtensions_.28_O_.29">
+                                <span class="tocnumber">2.3.10</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.preventExtensions ( O )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-53">
+                            <a href="#Object.isSealed_.28_O_.29">
+                                <span class="tocnumber">2.3.11</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.isSealed ( O )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-54">
+                            <a href="#Object.isFrozen_.28_O_.29">
+                                <span class="tocnumber">2.3.12</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.isFrozen ( O )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-55">
+                            <a href="#Object.isExtensible_.28_O_.29">
+                                <span class="tocnumber">2.3.13</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.isExtensible ( O )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-56">
+                            <a href="#Object.keys_.28_O_.29">
+                                <span class="tocnumber">2.3.14</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.keys ( O )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-57">
+                    <a href="#Object_.E7.9A.84_prototype_.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">2.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            Object 的 prototype 对象的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-58">
+                            <a href="#Object.prototype.constructor">
+                                <span class="tocnumber">2.4.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-59">
+                            <a href="#Object.prototype.toString_.28_.29">
+                                <span class="tocnumber">2.4.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.prototype.toString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-60">
+                            <a href="#Object.prototype.toLocaleString_.28_.29">
+                                <span class="tocnumber">2.4.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.prototype.toLocaleString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-61">
+                            <a href="#Object.prototype.valueOf_.28_.29">
+                                <span class="tocnumber">2.4.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.prototype.valueOf ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-62">
+                            <a href="#Object.prototype.hasOwnProperty_.28V.29">
+                                <span class="tocnumber">2.4.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.prototype.hasOwnProperty (V)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-63">
+                            <a href="#Object.prototype.isPrototypeOf_.28V.29">
+                                <span class="tocnumber">2.4.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.prototype.isPrototypeOf (V)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-64">
+                            <a href="#Object.prototype.propertyIsEnumerable_.28V.29">
+                                <span class="tocnumber">2.4.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Object.prototype.propertyIsEnumerable (V)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-65">
+                    <a href="#Object_.E7.9A.84.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">2.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            Object 的实例的属性
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-66">
+            <a href="#Function_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">3</span>
+                <span class="toctext">
+                    <span></span>
+                    Function 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-67">
+                    <a href="#.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8_Function_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">3.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            作为函数调用 Function 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-68">
+                            <a href="#Function_.28p1.2C_p2.2C_.E2.80.A6_.2C_pn.2C_body.29">
+                                <span class="tocnumber">3.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Function (p1, p2, … , pn, body)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-69">
+                    <a href="#Function_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">3.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            Function 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-70">
+                            <a href="#new_Function_.28p1.2C_p2.2C_.E2.80.A6_.2C_pn.2C_body.29">
+                                <span class="tocnumber">3.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Function (p1, p2, … , pn, body)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-71">
+                    <a href="#Function_.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">3.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            Function 构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-72">
+                            <a href="#Function.prototype">
+                                <span class="tocnumber">3.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Function.prototype
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-73">
+                            <a href="#Function.length">
+                                <span class="tocnumber">3.3.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Function.length
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-74">
+                    <a href="#Function_.E7.9A.84_prototype_.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">3.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            Function 的 prototype 对象的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-75">
+                            <a href="#Function.prototype.constructor">
+                                <span class="tocnumber">3.4.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Function.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-76">
+                            <a href="#Function.prototype.toString_.28_.29">
+                                <span class="tocnumber">3.4.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Function.prototype.toString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-77">
+                            <a href="#Function.prototype.apply_.28thisArg.2C_argArray.29">
+                                <span class="tocnumber">3.4.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Function.prototype.apply (thisArg, argArray)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-78">
+                            <a href="#Function.prototype.call_.28thisArg_.5B_.2C_arg1_.5B_.2C_arg2.2C_.E2.80.A6_.5D_.5D_.29">
+                                <span class="tocnumber">3.4.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Function.prototype.call (thisArg [ , arg1 [ , arg2, … ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-79">
+                            <a href="#Function.prototype.bind_.28thisArg_.5B.2C_arg1_.5B.2C_arg2.2C_.E2.80.A6.5D.5D.29">
+                                <span class="tocnumber">3.4.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Function.prototype.bind (thisArg [, arg1 [, arg2, …]])
+                                </span>
+                            </a>
+                            <ul>
+                                <li class="toclevel-4 tocsection-80">
+                                    <a href="#.5B.5BCall.5D.5D">
+                                        <span class="tocnumber">3.4.5.1</span>
+                                        <span class="toctext">
+                                            <span></span>
+                                            [[Call]]
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="toclevel-4 tocsection-81">
+                                    <a href="#.5B.5BConstruct.5D.5D">
+                                        <span class="tocnumber">3.4.5.2</span>
+                                        <span class="toctext">
+                                            <span></span>
+                                            [[Construct]]
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="toclevel-4 tocsection-82">
+                                    <a href="#.5B.5BHasInstance.5D.5D_.28V.29">
+                                        <span class="tocnumber">3.4.5.3</span>
+                                        <span class="toctext">
+                                            <span></span>
+                                            [[HasInstance]] (V)
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-83">
+                    <a href="#Function_.E7.9A.84.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">3.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            Function 的实例的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-84">
+                            <a href="#length">
+                                <span class="tocnumber">3.5.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    length
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-85">
+                            <a href="#prototype">
+                                <span class="tocnumber">3.5.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    prototype
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-86">
+                            <a href="#.5B.5BHasInstance.5D.5D_.28V.29_2">
+                                <span class="tocnumber">3.5.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    [[HasInstance]] (V)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-87">
+                            <a href="#.5B.5BGet.5D.5D_.28P.29">
+                                <span class="tocnumber">3.5.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    [[Get]] (P)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-88">
+            <a href="#Array_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">4</span>
+                <span class="toctext">
+                    <span></span>
+                    Array 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-89">
+                    <a href="#.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8_Array_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">4.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            作为函数调用 Array 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-90">
+                            <a href="#Array_.28_.5B_item1_.5B_.2C_item2_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">4.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array ( [ item1 [ , item2 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-91">
+                    <a href="#Array_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">4.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            Array 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-92">
+                            <a href="#new_Array_.28_.5B_item0_.5B_.2C_item1_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">4.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Array ( [ item0 [ , item1 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-93">
+                            <a href="#new_Array_.28len.29">
+                                <span class="tocnumber">4.2.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Array (len)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-94">
+                    <a href="#Array_.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">4.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            Array 构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-95">
+                            <a href="#Array.prototype">
+                                <span class="tocnumber">4.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-96">
+                            <a href="#Array.isArray_.28_arg_.29">
+                                <span class="tocnumber">4.3.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.isArray ( arg )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-97">
+                    <a href="#.E6.95.B0.E7.BB.84.E5.8E.9F.E5.9E.8B.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">4.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            数组原型对象的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-98">
+                            <a href="#Array.prototype.constructor">
+                                <span class="tocnumber">4.4.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-99">
+                            <a href="#Array.prototype.toString_.28_.29">
+                                <span class="tocnumber">4.4.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.toString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-100">
+                            <a href="#Array.prototype.toLocaleString_.28_.29">
+                                <span class="tocnumber">4.4.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.toLocaleString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-101">
+                            <a href="#Array.prototype.concat_.28_.5B_item1_.5B_.2C_item2_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">4.4.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.concat ( [ item1 [ , item2 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-102">
+                            <a href="#Array.prototype.join_.28separator.29">
+                                <span class="tocnumber">4.4.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.join (separator)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-103">
+                            <a href="#Array.prototype.pop_.28_.29">
+                                <span class="tocnumber">4.4.6</span>
+                                <span class="toctext">
+                                    Array.prototype.pop ( )<span></span>
+                                    <span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-104">
+                            <a href="#Array.prototype.push_.28_.5B_item1_.5B_.2C_item2_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">4.4.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.push ( [ item1 [ , item2 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-105">
+                            <a href="#Array.prototype.reverse_.28_.29">
+                                <span class="tocnumber">4.4.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.reverse ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-106">
+                            <a href="#Array.prototype.shift_.28_.29">
+                                <span class="tocnumber">4.4.9</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.shift ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-107">
+                            <a href="#Array.prototype.slice_.28start.2C_end.29">
+                                <span class="tocnumber">4.4.10</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.slice (start, end)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-108">
+                            <a href="#Array.prototype.sort_.28comparefn.29">
+                                <span class="tocnumber">4.4.11</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.sort (comparefn)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-109">
+                            <a href="#Array.prototype.splice_.28start.2C_deleteCount_.5B_.2C_item1_.5B_.2C_item2_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">4.4.12</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.splice (start, deleteCount [ , item1 [ , item2 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-110">
+                            <a href="#Array.prototype.unshift_.28_.5B_item1_.5B_.2C_item2_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">4.4.13</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.unshift ( [ item1 [ , item2 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-111">
+                            <a href="#Array.prototype.indexOf_.28_searchElement_.5B_.2C_fromIndex_.5D_.29">
+                                <span class="tocnumber">4.4.14</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.indexOf ( searchElement [ , fromIndex ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-112">
+                            <a href="#Array.prototype.lastIndexOf_.28_searchElement_.5B_.2C_fromIndex_.5D_.29">
+                                <span class="tocnumber">4.4.15</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.lastIndexOf ( searchElement [ , fromIndex ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-113">
+                            <a href="#Array.prototype.every_.28_callbackfn_.5B_.2C_thisArg_.5D_.29">
+                                <span class="tocnumber">4.4.16</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.every ( callbackfn [ , thisArg ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-114">
+                            <a href="#Array.prototype.some_.28_callbackfn_.5B_.2C_thisArg_.5D_.29">
+                                <span class="tocnumber">4.4.17</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.some ( callbackfn [ , thisArg ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-115">
+                            <a href="#Array.prototype.forEach_.28_callbackfn_.5B_.2C_thisArg_.5D_.29">
+                                <span class="tocnumber">4.4.18</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.forEach ( callbackfn [ , thisArg ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-116">
+                            <a href="#Array.prototype.map_.28_callbackfn_.5B_.2C_thisArg_.5D_.29">
+                                <span class="tocnumber">4.4.19</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.map ( callbackfn [ , thisArg ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-117">
+                            <a href="#Array.prototype.filter_.28_callbackfn_.5B_.2C_thisArg_.5D_.29">
+                                <span class="tocnumber">4.4.20</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.filter ( callbackfn [ , thisArg ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-118">
+                            <a href="#Array.prototype.reduce_.28_callbackfn_.5B_.2C_initialValue_.5D_.29">
+                                <span class="tocnumber">4.4.21</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.reduce ( callbackfn [ , initialValue ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-119">
+                            <a href="#Array.prototype.reduceRight_.28_callbackfn_.5B_.2C_initialValue_.5D_.29">
+                                <span class="tocnumber">4.4.22</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Array.prototype.reduceRight ( callbackfn [ , initialValue ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-120">
+                    <a href="#Array_.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">4.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            Array 实例的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-121">
+                            <a href="#.5B.5BDefineOwnProperty.5D.5D_.28_P.2C_Desc.2C_Throw_.29">
+                                <span class="tocnumber">4.5.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    [[DefineOwnProperty]] ( P, Desc, Throw )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-122">
+                            <a href="#length_2">
+                                <span class="tocnumber">4.5.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    length
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-123">
+            <a href="#String_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">5</span>
+                <span class="toctext">
+                    <span></span>
+                    String 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-124">
+                    <a href="#.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8_String_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">5.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            作为函数调用 String 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-125">
+                            <a href="#String_.28_.5B_value_.5D_.29">
+                                <span class="tocnumber">5.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String ( [ value ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-126">
+                    <a href="#String_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">5.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            String 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-127">
+                            <a href="#new_String_.28_.5B_value_.5D_.29">
+                                <span class="tocnumber">5.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new String ( [ value ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-128">
+                    <a href="#String_.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">5.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            String 构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-129">
+                            <a href="#String.prototype">
+                                <span class="tocnumber">5.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-130">
+                            <a href="#String.fromCharCode_.28_.5B_char0_.5B_.2C_char1_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">5.3.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.fromCharCode ( [ char0 [ , char1 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-131">
+                    <a href="#.E5.AD.97.E7.AC.A6.E4.B8.B2.E5.8E.9F.E5.9E.8B.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">5.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            字符串原型对象的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-132">
+                            <a href="#String.prototype.constructor">
+                                <span class="tocnumber">5.4.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-133">
+                            <a href="#String.prototype.toString_.28_.29">
+                                <span class="tocnumber">5.4.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.toString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-134">
+                            <a href="#String.prototype.valueOf_.28_.29">
+                                <span class="tocnumber">5.4.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.valueOf ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-135">
+                            <a href="#String.prototype.charAt_.28pos.29">
+                                <span class="tocnumber">5.4.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.charAt (pos)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-136">
+                            <a href="#String.prototype.charCodeAt_.28pos.29">
+                                <span class="tocnumber">5.4.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.charCodeAt (pos)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-137">
+                            <a href="#String.prototype.concat_.28_.5B_string1_.5B_.2C_string2_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">5.4.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.concat ( [ string1 [ , string2 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-138">
+                            <a href="#String.prototype.indexOf_.28searchString.2C_position.29">
+                                <span class="tocnumber">5.4.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.indexOf (searchString, position)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-139">
+                            <a href="#String.prototype.lastIndexOf_.28searchString.2C_position.29">
+                                <span class="tocnumber">5.4.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.lastIndexOf (searchString, position)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-140">
+                            <a href="#String.prototype.localeCompare_.28that.29">
+                                <span class="tocnumber">5.4.9</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.localeCompare (that)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-141">
+                            <a href="#String.prototype.match_.28regexp.29">
+                                <span class="tocnumber">5.4.10</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.match (regexp)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-142">
+                            <a href="#String.prototype.replace_.28searchValue.2C_replaceValue.29">
+                                <span class="tocnumber">5.4.11</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.replace (searchValue, replaceValue)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-143">
+                            <a href="#String.prototype.search_.28regexp.29">
+                                <span class="tocnumber">5.4.12</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.search (regexp)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-144">
+                            <a href="#String.prototype.slice_.28start.2C_end.29">
+                                <span class="tocnumber">5.4.13</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.slice (start, end)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-145">
+                            <a href="#String.prototype.split_.28separator.2C_limit.29">
+                                <span class="tocnumber">5.4.14</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.split (separator, limit)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-146">
+                            <a href="#String.prototype.substring_.28start.2C_end.29">
+                                <span class="tocnumber">5.4.15</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.substring (start, end)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-147">
+                            <a href="#String.prototype.toLowerCase_.28_.29">
+                                <span class="tocnumber">5.4.16</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.toLowerCase ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-148">
+                            <a href="#String.prototype.toLocaleLowerCase_.28_.29">
+                                <span class="tocnumber">5.4.17</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.toLocaleLowerCase ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-149">
+                            <a href="#String.prototype.toUpperCase_.28_.29">
+                                <span class="tocnumber">5.4.18</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.toUpperCase ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-150">
+                            <a href="#String.prototype.toLocaleUpperCase_.28_.29">
+                                <span class="tocnumber">5.4.19</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.toLocaleUpperCase ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-151">
+                            <a href="#String.prototype.trim_.28_.29">
+                                <span class="tocnumber">5.4.20</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    String.prototype.trim ( )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-152">
+                    <a href="#String_.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">5.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            String 实例的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-153">
+                            <a href="#length_3">
+                                <span class="tocnumber">5.5.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    length
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-154">
+                            <a href="#.5B.5BGetOwnProperty.5D.5D_.28_P_.29">
+                                <span class="tocnumber">5.5.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    [[GetOwnProperty]] ( P )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-155">
+            <a href="#Boolean_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">6</span>
+                <span class="toctext">
+                    <span></span>
+                    Boolean 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-156">
+                    <a href="#.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8_Boolean_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">6.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            作为函数调用 Boolean 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-157">
+                            <a href="#Boolean_.28value.29">
+                                <span class="tocnumber">6.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Boolean (value)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-158">
+                    <a href="#Boolean_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">6.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            Boolean 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-159">
+                            <a href="#new_Boolean_.28value.29">
+                                <span class="tocnumber">6.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Boolean (value)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-160">
+                    <a href="#Boolean_.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">6.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            Boolean 构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-161">
+                            <a href="#Boolean.prototype">
+                                <span class="tocnumber">6.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Boolean.prototype
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-162">
+                    <a href="#Boolean_.E5.8E.9F.E5.9E.8B.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">6.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            Boolean 原型对象的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-163">
+                            <a href="#Boolean.prototype.constructor">
+                                <span class="tocnumber">6.4.1</span>
+                                <span class="toctext">
+                                    Boolean.prototype.constructor<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-164">
+                            <a href="#Boolean.prototype.toString_.28_.29">
+                                <span class="tocnumber">6.4.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Boolean.prototype.toString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-165">
+                            <a href="#Boolean.prototype.valueOf_.28_.29">
+                                <span class="tocnumber">6.4.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Boolean.prototype.valueOf ( )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-166">
+                    <a href="#Boolean_.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">6.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            Boolean 实例的属性
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-167">
+            <a href="#Number_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">7</span>
+                <span class="toctext">
+                    <span></span>
+                    Number 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-168">
+                    <a href="#.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8.E7.9A.84_Number_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">7.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            作为函数调用的 Number 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-169">
+                            <a href="#Number_.28_.5B_value_.5D_.29">
+                                <span class="tocnumber">7.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number ( [ value ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-170">
+                    <a href="#Number_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">7.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            Number 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-171">
+                            <a href="#new_Number_.28_.5B_value_.5D_.29">
+                                <span class="tocnumber">7.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Number ( [ value ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-172">
+                    <a href="#Number_.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">7.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            Number 构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-173">
+                            <a href="#Number.prototype">
+                                <span class="tocnumber">7.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.prototype
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-174">
+                            <a href="#Number.MAX_VALUE">
+                                <span class="tocnumber">7.3.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.MAX_VALUE
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-175">
+                            <a href="#Number.MIN_VALUE">
+                                <span class="tocnumber">7.3.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.MIN_VALUE
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-176">
+                            <a href="#Number.NaN">
+                                <span class="tocnumber">7.3.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.NaN
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-177">
+                            <a href="#Number.NEGATIVE_INFINITY">
+                                <span class="tocnumber">7.3.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.NEGATIVE_INFINITY
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-178">
+                            <a href="#Number.POSITIVE_INFINITY">
+                                <span class="tocnumber">7.3.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.POSITIVE_INFINITY
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-179">
+                    <a href="#Number_.E5.8E.9F.E5.9E.8B.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">7.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            Number 原型对象的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-180">
+                            <a href="#Number.prototype.constructor">
+                                <span class="tocnumber">7.4.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-181">
+                            <a href="#Number.prototype.toString_.28_.5B_radix_.5D_.29">
+                                <span class="tocnumber">7.4.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.prototype.toString ( [ radix ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-182">
+                            <a href="#Number.prototype.toLocaleString.28.29">
+                                <span class="tocnumber">7.4.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.prototype.toLocaleString()
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-183">
+                            <a href="#Number.prototype.valueOf_.28_.29">
+                                <span class="tocnumber">7.4.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.prototype.valueOf ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-184">
+                            <a href="#Number.prototype.toFixed_.28fractionDigits.29">
+                                <span class="tocnumber">7.4.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.prototype.toFixed (fractionDigits)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-185">
+                            <a href="#Number.prototype.toExponential_.28fractionDigits.29">
+                                <span class="tocnumber">7.4.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.prototype.toExponential (fractionDigits)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-186">
+                            <a href="#Number.prototype.toPrecision_.28precision.29">
+                                <span class="tocnumber">7.4.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Number.prototype.toPrecision (precision)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-187">
+                    <a href="#Number_.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">7.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            Number 实例的属性
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-188">
+            <a href="#Math_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">8</span>
+                <span class="toctext">
+                    <span></span>
+                    Math 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-189">
+                    <a href="#Math_.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.80.BC.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">8.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            Math 对象的值属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-190">
+                            <a href="#E">
+                                <span class="tocnumber">8.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    E
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-191">
+                            <a href="#LN10">
+                                <span class="tocnumber">8.1.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    LN10
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-192">
+                            <a href="#LN2">
+                                <span class="tocnumber">8.1.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    LN2
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-193">
+                            <a href="#LOG2E">
+                                <span class="tocnumber">8.1.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    LOG2E
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-194">
+                            <a href="#LOG10E">
+                                <span class="tocnumber">8.1.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    LOG10E
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-195">
+                            <a href="#PI">
+                                <span class="tocnumber">8.1.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    PI
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-196">
+                            <a href="#SQRT1_2">
+                                <span class="tocnumber">8.1.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    SQRT1_2
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-197">
+                            <a href="#SQRT2">
+                                <span class="tocnumber">8.1.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    SQRT2
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-198">
+                    <a href="#Math_.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.87.BD.E6.95.B0.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">8.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            Math 对象的函数属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-199">
+                            <a href="#abs_.28x.29">
+                                <span class="tocnumber">8.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    abs (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-200">
+                            <a href="#acos_.28x.29">
+                                <span class="tocnumber">8.2.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    acos (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-201">
+                            <a href="#asin_.28x.29">
+                                <span class="tocnumber">8.2.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    asin (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-202">
+                            <a href="#atan_.28x.29">
+                                <span class="tocnumber">8.2.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    atan (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-203">
+                            <a href="#atan2_.28y.2C_x.29">
+                                <span class="tocnumber">8.2.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    atan2 (y, x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-204">
+                            <a href="#ceil_.28x.29">
+                                <span class="tocnumber">8.2.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    ceil (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-205">
+                            <a href="#cos_.28x.29">
+                                <span class="tocnumber">8.2.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    cos (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-206">
+                            <a href="#exp_.28x.29">
+                                <span class="tocnumber">8.2.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    exp (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-207">
+                            <a href="#floor_.28x.29">
+                                <span class="tocnumber">8.2.9</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    floor (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-208">
+                            <a href="#log_.28x.29">
+                                <span class="tocnumber">8.2.10</span>
+                                <span class="toctext">
+                                    log (x)<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-209">
+                            <a href="#max_.28_.5B_value1_.5B_.2C_value2_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">8.2.11</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    max ( [ value1 [ , value2 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-210">
+                            <a href="#min_.28_.5B_value1_.5B_.2C_value2_.5B_.2C_.E2.80.A6_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">8.2.12</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    min ( [ value1 [ , value2 [ , … ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-211">
+                            <a href="#pow_.28x.2C_y.29">
+                                <span class="tocnumber">8.2.13</span>
+                                <span class="toctext">
+                                    pow (x, y)<span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-212">
+                            <a href="#random_.28_.29">
+                                <span class="tocnumber">8.2.14</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    random ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-213">
+                            <a href="#round_.28x.29">
+                                <span class="tocnumber">8.2.15</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    round (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-214">
+                            <a href="#sin_.28x.29">
+                                <span class="tocnumber">8.2.16</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    sin (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-215">
+                            <a href="#sqrt_.28x.29">
+                                <span class="tocnumber">8.2.17</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    sqrt (x)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-216">
+                            <a href="#tan_.28x.29">
+                                <span class="tocnumber">8.2.18</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    tan (x)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-217">
+            <a href="#Date_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">9</span>
+                <span class="toctext">
+                    <span></span>
+                    Date 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-218">
+                    <a href="#Date_.E5.AF.B9.E8.B1.A1.E7.9A.84.E6.A6.82.E8.BF.B0.E5.92.8C.E6.8A.BD.E8.B1.A1.E6.93.8D.E4.BD.9C.E7.9A.84.E5.AE.9A.E4.B9.89">
+                        <span class="tocnumber">9.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            Date 对象的概述和抽象操作的定义
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-219">
+                            <a href="#.E6.97.B6.E9.97.B4.E5.80.BC.E5.92.8C.E6.97.B6.E9.97.B4.E8.8C.83.E5.9B.B4">
+                                <span class="tocnumber">9.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    时间值和时间范围
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-220">
+                            <a href="#.E5.A4.A9.E6.95.B0.E5.92.8C.E5.A4.A9.E5.86.85.E6.97.B6.E9.97.B4">
+                                <span class="tocnumber">9.1.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    天数和天内时间
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-221">
+                            <a href="#.E5.B9.B4.E6.95.B0">
+                                <span class="tocnumber">9.1.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    年数
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-222">
+                            <a href="#.E6.9C.88.E6.95.B0">
+                                <span class="tocnumber">9.1.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    月数
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-223">
+                            <a href="#.E6.97.A5.E6.9C.9F.E6.95.B0">
+                                <span class="tocnumber">9.1.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    日期数
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-224">
+                            <a href="#.E6.98.9F.E6.9C.9F.E6.95.B0">
+                                <span class="tocnumber">9.1.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    星期数
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-225">
+                            <a href="#.E6.9C.AC.E5.9C.B0.E6.97.B6.E5.8C.BA.E6.A0.A1.E5.87.86">
+                                <span class="tocnumber">9.1.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    本地时区校准
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-226">
+                            <a href="#.E5.A4.8F.E4.BB.A4.E6.97.B6.E6.A0.A1.E5.87.86">
+                                <span class="tocnumber">9.1.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    夏令时校准
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-227">
+                            <a href="#.E6.9C.AC.E5.9C.B0.E6.97.B6.E9.97.B4">
+                                <span class="tocnumber">9.1.9</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    本地时间
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-228">
+                            <a href="#.E5.B0.8F.E6.97.B6.E3.80.81.E5.88.86.E9.92.9F.E3.80.81.E7.A7.92.E3.80.81.E6.AF.AB.E7.A7.92">
+                                <span class="tocnumber">9.1.10</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    小时、分钟、秒、毫秒
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-229">
+                            <a href="#MakeTime_.28hour.2C_min.2C_sec.2C_ms.29">
+                                <span class="tocnumber">9.1.11</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    MakeTime (hour, min, sec, ms)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-230">
+                            <a href="#MakeDay_.28year.2C_month.2C_date.29">
+                                <span class="tocnumber">9.1.12</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    MakeDay (year, month, date)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-231">
+                            <a href="#MakeDate_.28day.2C_time.29">
+                                <span class="tocnumber">9.1.13</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    MakeDate (day, time)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-232">
+                            <a href="#TimeClip_.28time.29">
+                                <span class="tocnumber">9.1.14</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    TimeClip (time)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-233">
+                            <a href="#.E6.97.A5.E6.9C.9F.E6.97.B6.E9.97.B4.E5.AD.97.E7.AC.A6.E4.B8.B2.E6.A0.BC.E5.BC.8F">
+                                <span class="tocnumber">9.1.15</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    日期时间字符串格式
+                                </span>
+                            </a>
+                            <ul>
+                                <li class="toclevel-4 tocsection-234">
+                                    <a href="#.E6.89.A9.E5.B1.95.E7.9A.84.E5.B9.B4">
+                                        <span class="tocnumber">9.1.15.1</span>
+                                        <span class="toctext">
+                                            <span></span>
+                                            扩展的年
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-235">
+                    <a href="#.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8_Date_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">9.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            作为函数调用 Date 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-236">
+                            <a href="#Date_.28_.5B_year_.5B.2C_month_.5B.2C_date_.5B.2C_hours_.5B.2C_minutes_.5B.2C_seconds_.5B.2C_ms_.5D_.5D_.5D_.5D_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">9.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date ( [ year [, month [, date [, hours [, minutes [, seconds [, ms ] ] ] ] ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-237">
+                    <a href="#Date_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">9.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            Date 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-238">
+                            <a href="#new_Date_.28year.2C_month_.5B.2C_date_.5B.2C_hours_.5B.2C_minutes_.5B.2C_seconds_.5B.2C_ms_.5D_.5D_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">9.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Date (year, month [, date [, hours [, minutes [, seconds [, ms ] ] ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-239">
+                            <a href="#new_Date_.28value.29">
+                                <span class="tocnumber">9.3.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Date (value)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-240">
+                            <a href="#new_Date_.28_.29">
+                                <span class="tocnumber">9.3.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Date ( )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-241">
+                    <a href="#Date_.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">9.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            Date 构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-242">
+                            <a href="#Date.prototype">
+                                <span class="tocnumber">9.4.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-243">
+                            <a href="#Date.parse_.28string.29">
+                                <span class="tocnumber">9.4.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.parse (string)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-244">
+                            <a href="#Date.UTC_.28year.2C_month_.5B.2C_date_.5B.2C_hours_.5B.2C_minutes_.5B.2C_seconds_.5B.2C_ms_.5D_.5D_.5D_.5D_.5D.29">
+                                <span class="tocnumber">9.4.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.UTC (year, month [, date [, hours [, minutes [, seconds [, ms ] ] ] ] ])
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-245">
+                            <a href="#Date.now_.28_.29">
+                                <span class="tocnumber">9.4.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.now ( )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-246">
+                    <a href="#Date_.E5.8E.9F.E5.9E.8B.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">9.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            Date 原型对象的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-247">
+                            <a href="#Date.prototype.constructor">
+                                <span class="tocnumber">9.5.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-248">
+                            <a href="#Date.prototype.toString_.28_.29">
+                                <span class="tocnumber">9.5.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-249">
+                            <a href="#Date.prototype.toDateString_.28_.29">
+                                <span class="tocnumber">9.5.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toDateString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-250">
+                            <a href="#Date.prototype.toTimeString_.28_.29">
+                                <span class="tocnumber">9.5.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toTimeString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-251">
+                            <a href="#Date.prototype.toLocaleString_.28_.29">
+                                <span class="tocnumber">9.5.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toLocaleString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-252">
+                            <a href="#Date.prototype.toLocaleDateString_.28_.29">
+                                <span class="tocnumber">9.5.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toLocaleDateString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-253">
+                            <a href="#Date.prototype.toLocaleTimeString_.28_.29">
+                                <span class="tocnumber">9.5.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toLocaleTimeString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-254">
+                            <a href="#Date.prototype.valueOf_.28_.29">
+                                <span class="tocnumber">9.5.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.valueOf ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-255">
+                            <a href="#Date.prototype.getTime_.28_.29">
+                                <span class="tocnumber">9.5.9</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getTime ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-256">
+                            <a href="#Date.prototype.getFullYear_.28_.29">
+                                <span class="tocnumber">9.5.10</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getFullYear ( ) <span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-257">
+                            <a href="#Date.prototype.getUTCFullYear_.28_.29">
+                                <span class="tocnumber">9.5.11</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getUTCFullYear ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-258">
+                            <a href="#Date.prototype.getMonth_.28_.29">
+                                <span class="tocnumber">9.5.12</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getMonth ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-259">
+                            <a href="#Date.prototype.getUTCMonth_.28_.29">
+                                <span class="tocnumber">9.5.13</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getUTCMonth ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-260">
+                            <a href="#Date.prototype.getDate_.28_.29">
+                                <span class="tocnumber">9.5.14</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getDate ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-261">
+                            <a href="#Date.prototype.getUTCDate_.28_.29">
+                                <span class="tocnumber">9.5.15</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getUTCDate ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-262">
+                            <a href="#Date.prototype.getDay_.28_.29">
+                                <span class="tocnumber">9.5.16</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getDay ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-263">
+                            <a href="#Date.prototype.getUTCDay_.28_.29">
+                                <span class="tocnumber">9.5.17</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getUTCDay ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-264">
+                            <a href="#Date.prototype.getHours_.28_.29">
+                                <span class="tocnumber">9.5.18</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getHours ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-265">
+                            <a href="#Date.prototype.getUTCHours_.28_.29">
+                                <span class="tocnumber">9.5.19</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getUTCHours ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-266">
+                            <a href="#Date.prototype.getMinutes_.28_.29">
+                                <span class="tocnumber">9.5.20</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getMinutes ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-267">
+                            <a href="#Date.prototype.getUTCMinutes_.28_.29">
+                                <span class="tocnumber">9.5.21</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getUTCMinutes ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-268">
+                            <a href="#Date.prototype.getSeconds_.28_.29">
+                                <span class="tocnumber">9.5.22</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getSeconds ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-269">
+                            <a href="#Date.prototype.getUTCSeconds_.28_.29">
+                                <span class="tocnumber">9.5.23</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getUTCSeconds ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-270">
+                            <a href="#Date.prototype.getMilliseconds_.28_.29">
+                                <span class="tocnumber">9.5.24</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getMilliseconds ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-271">
+                            <a href="#Date.prototype.getUTCMilliseconds_.28_.29">
+                                <span class="tocnumber">9.5.25</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getUTCMilliseconds ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-272">
+                            <a href="#Date.prototype.getTimezoneOffset_.28_.29">
+                                <span class="tocnumber">9.5.26</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.getTimezoneOffset ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-273">
+                            <a href="#Date.prototype.setTime_.28time.29">
+                                <span class="tocnumber">9.5.27</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setTime (time)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-274">
+                            <a href="#Date.prototype.setMilliseconds_.28ms.29">
+                                <span class="tocnumber">9.5.28</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setMilliseconds (ms)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-275">
+                            <a href="#Date.prototype.setUTCMilliseconds_.28ms.29">
+                                <span class="tocnumber">9.5.29</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setUTCMilliseconds (ms)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-276">
+                            <a href="#Date.prototype.setSeconds_.28sec_.5B.2C_ms_.5D_.29">
+                                <span class="tocnumber">9.5.30</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setSeconds (sec [, ms ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-277">
+                            <a href="#Date.prototype.setUTCSeconds_.28sec_.5B.2C_ms_.5D_.29">
+                                <span class="tocnumber">9.5.31</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setUTCSeconds (sec [, ms ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-278">
+                            <a href="#Date.prototype.setMinutes_.28min_.5B.2C_sec_.5B.2C_ms_.5D_.5D_.29">
+                                <span class="tocnumber">9.5.32</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setMinutes (min [, sec [, ms ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-279">
+                            <a href="#Date.prototype.setUTCMinutes_.28min_.5B.2C_sec_.5B.2C_ms_.5D_.5D_.29">
+                                <span class="tocnumber">9.5.33</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setUTCMinutes (min [, sec [, ms ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-280">
+                            <a href="#Date.prototype.setHours_.28hour_.5B.2C_min_.5B.2C_sec_.5B.2C_ms_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">9.5.34</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setHours (hour [, min [, sec [, ms ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-281">
+                            <a href="#Date.prototype.setUTCHours_.28hour_.5B.2C_min_.5B.2C_sec_.5B.2C_ms_.5D_.5D_.5D_.29">
+                                <span class="tocnumber">9.5.35</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setUTCHours (hour [, min [, sec [, ms ] ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-282">
+                            <a href="#Date.prototype.setDate_.28date.29">
+                                <span class="tocnumber">9.5.36</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setDate (date)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-283">
+                            <a href="#Date.prototype.setUTCDate_.28date.29">
+                                <span class="tocnumber">9.5.37</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setUTCDate (date)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-284">
+                            <a href="#Date.prototype.setMonth_.28month_.5B.2C_date_.5D_.29">
+                                <span class="tocnumber">9.5.38</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setMonth (month [, date ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-285">
+                            <a href="#Date.prototype.setUTCMonth_.28month_.5B.2C_date_.5D_.29">
+                                <span class="tocnumber">9.5.39</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setUTCMonth (month [, date ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-286">
+                            <a href="#Date.prototype.setFullYear_.28year_.5B.2C_month_.5B.2C_date_.5D_.5D_.29">
+                                <span class="tocnumber">9.5.40</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setFullYear (year [, month [, date ] ] ) <span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-287">
+                            <a href="#Date.prototype.setUTCFullYear_.28year_.5B.2C_month_.5B.2C_date_.5D_.5D_.29">
+                                <span class="tocnumber">9.5.41</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.setUTCFullYear (year [, month [, date ] ] )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-288">
+                            <a href="#Date.prototype.toUTCString_.28_.29">
+                                <span class="tocnumber">9.5.42</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toUTCString ( ) <span></span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-289">
+                            <a href="#Date.prototype.toISOString_.28_.29">
+                                <span class="tocnumber">9.5.43</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toISOString ( )
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-290">
+                            <a href="#Date.prototype.toJSON_.28_key_.29">
+                                <span class="tocnumber">9.5.44</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Date.prototype.toJSON ( key )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-291">
+                    <a href="#Date_.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">9.6</span>
+                        <span class="toctext">
+                            <span></span>
+                            Date 实例的属性
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-292">
+            <a href="#RegExp_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">10</span>
+                <span class="toctext">
+                    <span></span>
+                    RegExp 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-293">
+                    <a href="#.E6.A8.A1.E5.BC.8F.EF.BC.88Patterns.EF.BC.89">
+                        <span class="tocnumber">10.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            模式（Patterns）
+                        </span>
+                    </a>
+                </li>
+                <li class="toclevel-2 tocsection-294">
+                    <a href="#.E6.A8.A1.E5.BC.8F.E8.AF.AD.E4.B9.89.EF.BC.88Pattern_Semantics.EF.BC.89">
+                        <span class="tocnumber">10.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            模式语义（Pattern Semantics）
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-295">
+                            <a href="#.E8.A1.A8.E7.A4.BA.E6.B3.95.EF.BC.88Notation.EF.BC.89">
+                                <span class="tocnumber">10.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    <span></span>
+                                    表示法（Notation）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-296">
+                            <a href="#.E6.A8.A1.E5.BC.8F.EF.BC.88Pattern.EF.BC.89">
+                                <span class="tocnumber">10.2.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    模式（Pattern）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-297">
+                            <a href="#.E6.9E.90.E5.8F.96.EF.BC.88Disjunction.EF.BC.89">
+                                <span class="tocnumber">10.2.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    析取（Disjunction）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-298">
+                            <a href="#.E9.80.89.E6.8B.A9.E9.A1.B9.EF.BC.88Alternative.EF.BC.89">
+                                <span class="tocnumber">10.2.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    选择项（Alternative）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-299">
+                            <a href="#.E5.8C.B9.E9.85.8D.E9.A1.B9.EF.BC.88Term.EF.BC.89">
+                                <span class="tocnumber">10.2.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    匹配项（Term）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-300">
+                            <a href="#.E6.96.AD.E8.A8.80.EF.BC.88Assertion.EF.BC.89">
+                                <span class="tocnumber">10.2.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    断言（Assertion）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-301">
+                            <a href="#.E9.87.8F.E8.AF.8D.EF.BC.88Quantifier.EF.BC.89">
+                                <span class="tocnumber">10.2.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    量词（Quantifier）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-302">
+                            <a href="#.E5.8E.9F.E5.AD.90.EF.BC.88Atom.EF.BC.89">
+                                <span class="tocnumber">10.2.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    原子（Atom）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-303">
+                            <a href="#.E8.BD.AC.E4.B9.89.E5.8E.9F.E5.AD.90.EF.BC.88AtomEscape.EF.BC.89">
+                                <span class="tocnumber">10.2.9</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    转义原子（AtomEscape）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-304">
+                            <a href="#.E8.BD.AC.E4.B9.89.E5.AD.97.E7.AC.A6.EF.BC.88CharacterEscap.EF.BC.89">
+                                <span class="tocnumber">10.2.10</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    转义字符（CharacterEscap）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-305">
+                            <a href="#.E8.BD.AC.E4.B9.89.E5.8D.81.E8.BF.9B.E5.88.B6.EF.BC.88DecimalEscape.EF.BC.89">
+                                <span class="tocnumber">10.2.11</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    转义十进制（DecimalEscape）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-306">
+                            <a href="#.E8.BD.AC.E4.B9.89.E5.AD.97.E7.AC.A6.E7.B1.BB.EF.BC.88CharacterClassEscape.EF.BC.89">
+                                <span class="tocnumber">10.2.12</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    转义字符类（CharacterClassEscape）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-307">
+                            <a href="#.E5.AD.97.E7.AC.A6.E7.B1.BB.EF.BC.88CharacterClass.EF.BC.89">
+                                <span class="tocnumber">10.2.13</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    字符类（CharacterClass）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-308">
+                            <a href="#.E5.AD.97.E7.AC.A6.E8.8C.83.E5.9B.B4.E9.9B.86.EF.BC.88ClassRanges.EF.BC.89">
+                                <span class="tocnumber">10.2.14</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    字符范围集（ClassRanges）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-309">
+                            <a href="#.E9.9D.9E.E7.A9.BA.E5.AD.97.E7.AC.A6.E8.8C.83.E5.9B.B4.E9.9B.86.EF.BC.88NonemptyClassRanges.EF.BC.89">
+                                <span class="tocnumber">10.2.15</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    非空字符范围集（NonemptyClassRanges）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-310">
+                            <a href="#.E6.97.A0.E8.BF.9E.E6.8E.A5.E7.AC.A6.E9.9D.9E.E7.A9.BA.E5.AD.97.E7.AC.A6.E8.8C.83.E5.9B.B4.E9.9B.86.EF.BC.88NonemptyClassRangesNoDash.EF.BC.89">
+                                <span class="tocnumber">10.2.16</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    无连接符非空字符范围集（NonemptyClassRangesNoDash）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-311">
+                            <a href="#.E5.AD.97.E7.AC.A6.E7.B1.BB.E5.8E.9F.E5.AD.90.EF.BC.88ClassAtom.EF.BC.89">
+                                <span class="tocnumber">10.2.17</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    字符类原子（ClassAtom）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-312">
+                            <a href="#.E9.9D.9E.E8.BF.9E.E6.8E.A5.E7.AC.A6.E5.AD.97.E7.AC.A6.E7.B1.BB.E5.8E.9F.E5.AD.90.EF.BC.88ClassAtomNoDash.EF.BC.89">
+                                <span class="tocnumber">10.2.18</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    非连接符字符类原子（ClassAtomNoDash）
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-313">
+                            <a href="#.E5.AD.97.E7.AC.A6.E7.B1.BB.E5.8F.AF.E7.94.A8.E8.BD.AC.E4.B9.89.EF.BC.88ClassEscape.EF.BC.89">
+                                <span class="tocnumber">10.2.19</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    字符类可用转义（ClassEscape）
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-314">
+                    <a href="#RegExp_.E6.9E.84.E9.80.A0.E5.99.A8.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8">
+                        <span class="tocnumber">10.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            RegExp 构造器作为函数调用
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-315">
+                            <a href="#RegExp.28pattern.2C_flags.29">
+                                <span class="tocnumber">10.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    RegExp(pattern, flags)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-316">
+                    <a href="#RegExp_.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">10.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            RegExp 构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-317">
+                            <a href="#new_RegExp.28pattern.2C_flags.29">
+                                <span class="tocnumber">10.4.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new RegExp(pattern, flags)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-318">
+                    <a href="#RegExp.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">10.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            RegExp构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-319">
+                            <a href="#RegExp.prototype">
+                                <span class="tocnumber">10.5.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    RegExp.prototype
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-320">
+                    <a href="#RegExp.Prototype.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">10.6</span>
+                        <span class="toctext">
+                            <span></span>
+                            RegExp.Prototype的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-321">
+                            <a href="#RegExp.prototype.constructor">
+                                <span class="tocnumber">10.6.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    RegExp.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-322">
+                            <a href="#RegExp.prototype.exec.28string.29">
+                                <span class="tocnumber">10.6.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    RegExp.prototype.exec(string)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-323">
+                            <a href="#RegExp.prototype.test.28string.29">
+                                <span class="tocnumber">10.6.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    RegExp.prototype.test(string)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-324">
+                            <a href="#RegExp.prototype.toString.28.29">
+                                <span class="tocnumber">10.6.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    RegExp.prototype.toString()
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-325">
+                    <a href="#RegExp.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">10.7</span>
+                        <span class="toctext">
+                            <span></span>
+                            RegExp实例的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-326">
+                            <a href="#source">
+                                <span class="tocnumber">10.7.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-327">
+                            <a href="#global">
+                                <span class="tocnumber">10.7.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    global
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-328">
+                            <a href="#ignoreCase">
+                                <span class="tocnumber">10.7.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    ignoreCase
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-329">
+                            <a href="#multiline">
+                                <span class="tocnumber">10.7.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    multiline
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-330">
+                            <a href="#lastIndex">
+                                <span class="tocnumber">10.7.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    lastIndex
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-331">
+            <a href="#Error.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">11</span>
+                <span class="toctext">
+                    <span></span>
+                    Error对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-332">
+                    <a href="#Error.E6.9E.84.E9.80.A0.E5.99.A8.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8">
+                        <span class="tocnumber">11.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            Error构造器作为函数调用
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-333">
+                            <a href="#Error_.28message.29">
+                                <span class="tocnumber">11.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Error (message)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-334">
+                    <a href="#Error.E6.9E.84.E9.80.A0.E5.99.A8">
+                        <span class="tocnumber">11.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            Error构造器
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-335">
+                            <a href="#new_Error_.28message.29">
+                                <span class="tocnumber">11.2.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    new Error (message)
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-336">
+                    <a href="#Error.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">11.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            Error构造器的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-337">
+                            <a href="#Error.prototype">
+                                <span class="tocnumber">11.3.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Error.prototype
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-338">
+                    <a href="#Error_.E5.8E.9F.E5.9E.8B.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">11.4</span>
+                        <span class="toctext">
+                            <span></span>
+                            Error 原型对象的属性
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-339">
+                            <a href="#Error.prototype.constructor">
+                                <span class="tocnumber">11.4.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Error.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-340">
+                            <a href="#Error.prototype.name">
+                                <span class="tocnumber">11.4.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Error.prototype.name
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-341">
+                            <a href="#Error.prototype.message">
+                                <span class="tocnumber">11.4.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Error.prototype.message
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-342">
+                            <a href="#Error.prototype.toString_.28_.29">
+                                <span class="tocnumber">11.4.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    Error.prototype.toString ( )
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-343">
+                    <a href="#Error.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                        <span class="tocnumber">11.5</span>
+                        <span class="toctext">
+                            <span></span>
+                            Error实例的属性
+                        </span>
+                    </a>
+                </li>
+                <li class="toclevel-2 tocsection-344">
+                    <a href="#.E7.94.A8.E4.BA.8E.E6.9C.AC.E6.A0.87.E5.87.86.E7.9A.84.E5.86.85.E9.83.A8.E9.94.99.E8.AF.AF.E7.B1.BB.E5.9E.8B">
+                        <span class="tocnumber">11.6</span>
+                        <span class="toctext">
+                            <span></span>
+                            用于本标准的内部错误类型
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-345">
+                            <a href="#EvalError">
+                                <span class="tocnumber">11.6.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    EvalError
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-346">
+                            <a href="#RangeError">
+                                <span class="tocnumber">11.6.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    RangeError
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-347">
+                            <a href="#ReferenceError">
+                                <span class="tocnumber">11.6.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    ReferenceError
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-348">
+                            <a href="#SyntaxError">
+                                <span class="tocnumber">11.6.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    SyntaxError
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-349">
+                            <a href="#TypeError">
+                                <span class="tocnumber">11.6.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    TypeError
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-350">
+                            <a href="#URIError">
+                                <span class="tocnumber">11.6.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    URIError
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-351">
+                    <a href="#NativeError.E5.AF.B9.E8.B1.A1.E7.BB.93.E6.9E.84">
+                        <span class="tocnumber">11.7</span>
+                        <span class="toctext">
+                            <span></span>
+                            NativeError对象结构
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-352">
+                            <a href="#NativeError.E6.9E.84.E9.80.A0.E5.99.A8.E4.BD.9C.E4.B8.BA.E5.87.BD.E6.95.B0.E8.B0.83.E7.94.A8">
+                                <span class="tocnumber">11.7.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError构造器作为函数调用
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-353">
+                            <a href="#NativeError_.28message.29">
+                                <span class="tocnumber">11.7.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError (message)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-354">
+                            <a href="#NativeError.E6.9E.84.E9.80.A0.E5.99.A8">
+                                <span class="tocnumber">11.7.3</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError构造器
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-355">
+                            <a href="#New_NativeError_.28message.29">
+                                <span class="tocnumber">11.7.4</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    New NativeError (message)
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-356">
+                            <a href="#NativeError.E6.9E.84.E9.80.A0.E5.99.A8.E7.9A.84.E5.B1.9E.E6.80.A7">
+                                <span class="tocnumber">11.7.5</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError构造器的属性
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-357">
+                            <a href="#NativeError.prototype">
+                                <span class="tocnumber">11.7.6</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError.prototype
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-358">
+                            <a href="#NativeError.E5.8E.9F.E5.9E.8B.E5.AF.B9.E8.B1.A1.E7.9A.84.E5.B1.9E.E6.80.A7">
+                                <span class="tocnumber">11.7.7</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError原型对象的属性
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-359">
+                            <a href="#NativeError.prototype.constructor">
+                                <span class="tocnumber">11.7.8</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError.prototype.constructor
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-360">
+                            <a href="#NativeError.prototype.name">
+                                <span class="tocnumber">11.7.9</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError.prototype.name
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-361">
+                            <a href="#NativeError.prototype.message">
+                                <span class="tocnumber">11.7.10</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError.prototype.message
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-362">
+                            <a href="#NativeError_.E5.AE.9E.E4.BE.8B.E7.9A.84.E5.B1.9E.E6.80.A7">
+                                <span class="tocnumber">11.7.11</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    NativeError 实例的属性
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="toclevel-1 tocsection-363">
+            <a href="#JSON_.E5.AF.B9.E8.B1.A1">
+                <span class="tocnumber">12</span>
+                <span class="toctext">
+                    <span></span>
+                    JSON 对象
+                </span>
+            </a>
+            <ul>
+                <li class="toclevel-2 tocsection-364">
+                    <a href="#JSON_.E8.AF.AD.E6.B3.95">
+                        <span class="tocnumber">12.1</span>
+                        <span class="toctext">
+                            <span></span>
+                            JSON 语法
+                        </span>
+                    </a>
+                    <ul>
+                        <li class="toclevel-3 tocsection-365">
+                            <a href="#JSON_.E8.AF.8D.E6.B3.95">
+                                <span class="tocnumber">12.1.1</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    JSON 词法
+                                </span>
+                            </a>
+                        </li>
+                        <li class="toclevel-3 tocsection-366">
+                            <a href="#JSON_.E5.8F.A5.E6.B3.95">
+                                <span class="tocnumber">12.1.2</span>
+                                <span class="toctext">
+                                    <span></span>
+                                    JSON 句法
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="toclevel-2 tocsection-367">
+                    <a href="#parse_.28_text_.5B_.2C_reviver_.5D_.29">
+                        <span class="tocnumber">12.2</span>
+                        <span class="toctext">
+                            <span></span>
+                            parse ( text [ , reviver ] )
+                        </span>
+                    </a>
+                </li>
+                <li class="toclevel-2 tocsection-368">
+                    <a href="#stringify_.28_value_.5B_.2C_replacer_.5B_.2C_space_.5D_.5D_.29">
+                        <span class="tocnumber">12.3</span>
+                        <span class="toctext">
+                            <span></span>
+                            stringify ( value [ , replacer [ , space ] ] )
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

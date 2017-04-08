@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试jQuery API</title>
+	<script src="../../libs/js/jquery.js"></script>
+</head>
+<body>
+	<code>
+		<pre>
+			jQuery.fn = jQuery.prototype = {
+			    jquery: version,
+			    constructor: jQuery,
+			    length: 0,
+			    toArray: function() {},
+			    get: function( num ) {},
+			    each: function( callback ) {},
+			    map: function( callback ) {},
+			    first: function() {},
+			    last: function() {},
+			    eq: function( i ) {},
+			    end: function() {},
+			    push: push,
+			    sort: arr.sort,
+			    slice: function() {},
+			    splice: arr.splice
+			    pushStack: function( elems ) {},
+			};
+		</pre>
+	</code>
+
+	<section>
+		jquery API
+	</section>
+
+	<section>
+		jquery API
+	</section>
+
+	<ul id="list">
+		<li>挺好</li>
+		<li>积分兑换</li>
+		<li>即可</li>
+		<li>看看了嘉丰大厦</li>
+		<li>㕛方式</li>
+		<li>阿道夫</li>
+		<li>不施工方的</li>
+	</ul>
+
+	<script>
+		// 可以通过以下两种方式访问到其中的方法和属性
+		// 通过原型直接获取
+		// 通过选择器选择的元素的属性或者方法来获取
+
+		// 通过选择器选择的元素是jQuery的实例，其方法或者属性是继承jQuery原型上的
+
+		// 获取jQuery版本
+		console.log($.fn.jquery);
+		console.log($("body").jquery);
+
+		// 构造函数
+		console.log($.fn.constructor);
+		console.log($("html").constructor);
+
+		console.log($.fn.length);//0
+		console.log($("body").length);//1,
+		console.log($("code").length);//1
+		console.log($("section").length);//2
+
+		// toArray
+		console.log($.fn.toArray());//[]
+		console.log($("#list li").toArray());//[li,li,li,li,li......]
+
+		// get
+		console.log($.fn.get());//[]
+		console.log($.fn.get(4));//[]
+		console.log($("#list li").get());//[li,li,li,li.....]
+		console.log($("#list li").get(1));//<li>积分兑换</li>
+		console.log($("#list li").get(3));//<li>看看了嘉丰大厦</li>
+		console.log($("#list li").get(null));//<li>看看了嘉丰大厦</li>
+		console.log($("#list li").get(17));//undefined
+		console.log($("#list li").get(-40));//<li>㕛方式</li>
+		console.log($("#list li").get("hello world"));//undefined
+		console.log($("#list li").get({}));//undefined
+
+		// eq
+		console.log($("#list li").eq(0));//返回jQuery对象
+		console.log($("#list li").get(0));//仅仅是元素
+		console.log($("#list li").first());
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

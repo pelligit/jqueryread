@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery.photo</title>
+		<script src="../../libs/js/jquery.min.js"></script>
+		<script src="jquery.photo.js"></script>
+		<style>
+			#photos_here{
+				width: 500px;
+				height: 120px;
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="photos_here">
+			<img src="img/photos/hi3.jpg" alt="">
+			<img src="img/photos/hi2.jpg" alt="">
+			<img src="img/photos/hi4.jpg" alt="">
+			<img src="img/photos/hi1.jpg" alt="">
+			<img src="img/photos/hi5.jpg" alt="">
+			<img src="img/photos/hi6.jpg" alt="">
+			<img src="img/photos/hi7.jpg" alt="">
+			<img src="img/photos/hi8.jpg" alt="">
+			<img src="img/photos/hi9.jpg" alt="">
+			<img src="img/photos/hi10.jpg" alt="">
+			<img src="img/photos/hi11.jpg" alt="">
+			<img src="img/photos/hi12.jpg" alt="">
+		</ul>
+
+		<script>
+			$(function(){
+				$("#photos_here").photos();
+			});
+		</script>
+	</body>
+</html>

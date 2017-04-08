@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>关于</title>
+    </head>
+    <body>
+        <div class="markdown-body">
+            <h1>Node.js 官方文档中文版</h1>
+            <p>本文档从引用参考和概念两个方面全面的解释了 Node.js API。每个章节描述了一个模块或高级概念。</p>
+            <p>一般情况下，属性、方法参数，及事件都会列在主标题下的列表中。</p>
+            <p>
+                每个 <code>.html</code>
+                文档都有对应的 <code>.json</code>
+                ，它们包含相同的结构化内容。这些东西目前还是实验性的，主要为各种集成开发环境（IDE）和开发工具提供便利。
+            </p>
+            <p>
+                每个 <code>.html</code>
+                和 <code>.json</code>
+                文件都和 <code>doc/api/</code>
+                目录下的 <code>.markdown</code>
+                文件相对应。这些文档使用 <code>tools/doc/generate.js</code>
+                程序生成。 HTML 模板位于 <code>doc/template.html</code>
+                。
+            </p>
+            <h2 id="456bfdbdb4b3abc0979b0cebf913898e">稳定性标志</h2>
+            <p>在文档中，你会看到每个章节的稳定性标志。Node.js API 还在改进中，成熟的部分会比其他章节值得信赖。经过大量验证和依赖的 API 是一般是不会变的。其他新增的，试验性的，或被证明具有危险性的部分正重新设计。</p>
+            <p>稳定性标志包括以下内容:</p>
+            <pre>
+                <code>稳定性（Stability）: 0 - 抛弃
+这部分内容有问题，并已计划改变。不要使用这些内容，可能会引起警告。不要想什么向后兼容性了。</code>
+            </pre>
+            <pre>
+                <code>稳定性（Stability）: 1 - 试验
+这部分内容最近刚引进，将来的版本可能会改变也可能会被移除。你可以试试并提供反馈。如果你用到的部分对你来说非常重要，可以告诉 node 的核心团队。</code>
+            </pre>
+            <pre>
+                <code>稳定性（Stability）: 2 - 不稳定
+这部分 API 正在调整中，还没在实际工作测试中达到满意的程度。如果合理的话会保证向后兼容性。</code>
+            </pre>
+            <pre>
+                <code>稳定性（Stability）: 3 - 稳定
+这部分 API 验证过基本能令人满意，但是清理底层代码时可能会引起小的改变。保证向后的兼容性。</code>
+            </pre>
+            <pre>
+                <code>稳定性（Stability）: 4 - API 冻结
+这部分的 API 已经在产品中广泛试验，不太可能被改变。</code>
+            </pre>
+            <pre>
+                <code>稳定性（Stability）: 5 - 锁定
+除非发现了严重 bug，否则这部分代码永远不会改变。请不要对这部分内容提出更改建议，否则会被拒绝。
+</code>
+            </pre>
+            <h2 id="a530a6c5f4e348e8ce1dfbc4a24ee83e">JSON 输出</h2>
+            <pre>
+                <code>稳定性（Stability）: 1 - 试验</code>
+            </pre>
+            <p>每个通过 markdown 生成的 HTML 文件都有相应的 JSON 文件。</p>
+            <p>这个特性从 v0.6.12 开始,是试验性功能。</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>更新日期</th>
+                        <th>更新内容</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2015-04-21</td>
+                        <td>第一版发布，翻译自 Node.js V0.12.2 官方文档</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

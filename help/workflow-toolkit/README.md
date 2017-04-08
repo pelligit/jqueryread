@@ -89,3 +89,22 @@
 
 > 任何简单机械的重复劳动都应该让机械去完成  
 
+
+
+### links
+
+> [Grunt自动化的前端项目构建工具](http://www.xuanfengge.com/grunt-front-end-project-build-automation-tools.html)
+> 百度有FIS， 腾讯有Modjs，360有燕尾服，还有很多团队在使用Ant，Shell等。而Grunt乐意成为目前最好的前端构建框架。
+> 
+> 
+
+[七大开源自动化构建工具，程序员收好](http://tech.it168.com/a2017/0316/3105/000003105032.shtml)  
+
+
+* 自动化构建:需要反复重复的任务
+    * 压缩
+    * 编译
+    * 单元测试
+    * linting
+* 自动化部署
+
