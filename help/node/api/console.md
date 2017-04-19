@@ -1,0 +1,12 @@
+Console 类
+new Console(stdout[, stderr])
+console.assert(value[, message][, ...args])
+console.dir(obj[, options])
+console.error([data][, ...args])
+console.info([data][, ...args])
+console.log([data][, ...args])
+console.time(label)
+console.timeEnd(label)
+console.trace(message[, ...args])
+console.warn([data][, ...args])
+console (控制台)
